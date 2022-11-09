@@ -28,7 +28,7 @@ h4,
 h5,
 h6,
 p {
-	margin-top: 0;
+	margin: 0;
     padding-top: 0;
 }
 ul {
@@ -59,6 +59,9 @@ a {
     }
 .page-header {
     background-color: var(--white-fons-color);
+    }
+    .page .page-header {
+        border-bottom: 1px solid #ECECEC;
     }
 .main-nav {
     display: flex;
@@ -195,6 +198,7 @@ button {
     flex-basis: calc((100% - 90px) / 4);
 }
 .content-text {
+    margin-bottom: 10px;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
@@ -254,10 +258,10 @@ button {
     padding-bottom: 30px;
 }
 .items {
-
+    margin-bottom: 10px;
 }
 .text-title {
-    margin-bottom: 10px;
+
 }
 .features-subtitle {
     display: flex;
@@ -286,8 +290,8 @@ button {
 }
 /**----------------Footer Подвал*/
 .contact {
-    margin-top: 60px;
-    margin-bottom: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-color: var(--black-fons-color);
 }
 .heder-link {
@@ -315,12 +319,9 @@ button {
 .contact-items .contact-uptitle:focus {
     color: var(--title-text-color);
 }
-.contact-items .contact-subtitle {
-    padding-bottom: 9px;
-}
-.content-items .contact-uptitle {
-    padding-bottom: 9px;
-}
+.items-link:not(:last-child) {
+    margin-bottom: 9px;
+} 
 /**-------------Прибираємо курсив Подвал*/
 a {
     font-style: normal;
