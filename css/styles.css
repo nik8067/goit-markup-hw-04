@@ -9,6 +9,8 @@
     --black-fons-color: #2F303A;
     --logo-text-color: #000000;
     --card-content: #EEEEEE;
+    --color-fon-icon: #F5F4FA;
+    --border-fon-heder: #ECECEC;
 }
 /**------CSS для сторінки СТУДІЯ---------*/
 .page {
@@ -61,7 +63,7 @@ a {
     background-color: var(--white-fons-color);
     }
     .page .page-header {
-        border-bottom: 1px solid #ECECEC;
+        border-bottom: 1px solid var(--border-fon-heder);
     }
 .main-nav {
     display: flex;
@@ -116,11 +118,22 @@ a {
 color: var(--title-text-color);
 }
 
-/**-------------------FLEX phone**/
+/**-------------------FLEX + icon phone**/
 .info-nav {
    display: flex;
    margin-left: auto;
 }
+.link-info::before {
+    display: block;
+    content: "";
+    height: 16px;
+    width: 12px;
+    background-image: url("../images/envelope.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 .info-nav .item-info + .item-info {
     margin-left: 50px;
 }
@@ -139,6 +152,7 @@ color: var(--title-text-color);
 .info-nav a:focus {
     color: var(--title-text-color);
 }
+
 /**---------------------Hero*/
 .hero {
     max-width: 1600px;
@@ -209,6 +223,52 @@ button {
 }
 .item {
     flex-basis: calc((100% - 90px) / 4);
+}
+.item::before {
+    margin-bottom: 30px;
+    display: block;
+    content: "";
+    height: 120px;
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--color-fon-icon);
+}
+.icon-antenna::before {
+background-image: url("../images/antenna.svg");
+}
+.icon-clock::before {
+background-image: url("../images/clock.svg");
+}
+.icon-diagram::before {
+background-image: url("../images/diagram.svg");
+}
+.icon-astronaut::before {
+background-image: url("../images/astronaut.svg");
+}
+/*---------------------*/
+.link {
+    display: inline-block;
+    margin-top: 16px;
+    width: 44px;
+    height: 44px;
+    background-color: var(--white-fons-color)
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+}
+.instagram {
+    background-image: url("../images/instagram.svg");
+}
+.twitter {
+    background-image: url("../images/twitter.svg");
+}
+.facebook {
+    background-image: url("../images/facebook.svg");
+}
+.linkidin {
+    background-image: url("../images/linkedin.svg");
 }
 .content-text {
     margin-bottom: 10px;
