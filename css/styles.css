@@ -11,6 +11,7 @@
     --card-content: #EEEEEE;
     --color-fon-icon: #F5F4FA;
     --border-fon-heder: #ECECEC;
+    --border-line: #AFB1B8;
 }
 /**------CSS для сторінки СТУДІЯ---------*/
 .page {
@@ -115,7 +116,7 @@ a {
     color: var(--title-text-color);
 }
 .site-nav .link-nav.current {
-color: var(--title-text-color);
+    color: var(--title-text-color);
 }
 
 /**-------------------FLEX + icon phone**/
@@ -123,7 +124,15 @@ color: var(--title-text-color);
    display: flex;
    margin-left: auto;
 }
-.link-info::before {
+.link-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-icon {
+    margin-right: 10px;
+}
+/*.link-info::before {
     display: block;
     content: "";
     height: 16px;
@@ -132,7 +141,7 @@ color: var(--title-text-color);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-}
+}*/
 
 .info-nav .item-info + .item-info {
     margin-left: 50px;
@@ -148,8 +157,7 @@ color: var(--title-text-color);
     letter-spacing: 0.02em;
     color: var(--accent-text-color);
 }
-.info-nav a:hover,
-.info-nav a:focus {
+.info-nav .link-info:hover .info-icon {
     color: var(--title-text-color);
 }
 
@@ -246,30 +254,6 @@ background-image: url("../images/diagram.svg");
 .icon-astronaut::before {
 background-image: url("../images/astronaut.svg");
 }
-/*---------------------*/
-.link {
-    display: inline-block;
-    margin-top: 16px;
-    width: 44px;
-    height: 44px;
-    background-color: var(--white-fons-color)
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-}
-.instagram {
-    background-image: url("../images/instagram.svg");
-}
-.twitter {
-    background-image: url("../images/twitter.svg");
-}
-.facebook {
-    background-image: url("../images/facebook.svg");
-}
-.linkidin {
-    background-image: url("../images/linkedin.svg");
-}
 .content-text {
     margin-bottom: 10px;
     font-size: 14px;
@@ -334,7 +318,7 @@ background-image: url("../images/astronaut.svg");
     margin-bottom: 10px;
 }
 .text-title {
-
+    margin-bottom: 16px;
 }
 .features-subtitle {
     display: flex;
@@ -361,6 +345,104 @@ background-image: url("../images/astronaut.svg");
     letter-spacing: 0.03em;
     color: var(--accent-text-color);
 }
+/**Список соцмереж в секції Наша команда**/
+.contact-soc-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    }
+.contact-soc-item {
+    
+    }
+.contact-soc-link {
+    width: 44px;
+    height: 44px;
+    background-color: var(--white-fons-color);
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    }
+.contact-soc-icon {
+    fill: var(--border-line);
+    }
+.contact-soc-link:hover,
+.contact-soc-link:focus {
+    background-color: var(--title-text-color);
+    }
+.contact-soc-link:hover .contact-soc-icon {
+    fill: var(--white-fons-color);
+}
+.contact-soc-link:focus .contact-soc-icon {
+    fill: var(--white-fons-color);
+}
+    /*.link {
+        display: inline-block;
+        margin-top: 16px;
+        width: 44px;
+        height: 44px;
+        background-color: var(--white-fons-color)
+        background-size: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 50%;
+    }
+    .instagram {
+        background-image: url("../images/instagram.svg");
+    }
+    .twitter {
+        background-image: url("../images/twitter.svg");
+    }
+    .facebook {
+        background-image: url("../images/facebook.svg");
+    }
+    .linkidin {
+        background-image: url("../images/linkedin.svg");
+    }*/
+    .company {
+        text-align: center;
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    .client-company {
+        margin-bottom: 50px;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+        color: var(--primary-text-color);
+    }
+    .client-company-title {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+    .client-company-uptitle {
+        width: 170px;
+        height: 92px;
+        border: 1px solid var(--border-line);
+        border-radius: 4px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--white-fons-color);
+        color: var(--border-line);
+    }
+    .company-soc-icon {
+        width: 106px;
+        height: 60px;
+        fill: currentColor;
+    }
+    /*.company-soc-icon:hover,
+    .company-soc-icon:focus {
+        fill: var(--title-text-color);
+    }*/
+    .client-company-uptitle:hover,
+    .client-company-uptitle:focus .company-soc-icon {
+        border-color: var(--title-text-color);
+        color: var(--title-text-color);
+    }
 /**----------------Footer Подвал*/
 .contact {
     padding-top: 60px;
