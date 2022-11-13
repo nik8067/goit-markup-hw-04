@@ -162,7 +162,6 @@ a {
 }
 .link-info:hover .info-icon {
     color: var(--title-text-color);
-    background-color: var(--title-text-color);
 }
 
 /**---------------------Hero*/
