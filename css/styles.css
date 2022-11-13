@@ -126,11 +126,13 @@ a {
 }
 .link-info {
     display: flex;
+    text-decoration: none;
     align-items: center;
     justify-content: center;
 }
 .info-icon {
     margin-right: 10px;
+    fill: currentColor;
 }
 /*.link-info::before {
     display: block;
@@ -151,14 +153,16 @@ a {
     padding-bottom: 32px;
 }
 .info-nav .link-info {
+    display: flex;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--accent-text-color);
 }
-.info-nav .link-info:hover .info-icon {
+.link-info:hover .info-icon {
     color: var(--title-text-color);
+    background-color: var(--title-text-color);
 }
 
 /**---------------------Hero*/
